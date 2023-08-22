@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-primary{
+    color: #A10000 !important;
+}
+.bg-primary{
+    background-color: #A10000 !important;
+}
+.fadeInDown{
+    animation: fadeInDown 0.3s linear;
+}
+@keyframes fadeInDown {
+    from { transform: translateY(-200px); }
+    to { transform: translateY(0px); }
+}
+.pulse {
+    animation: pulse 1s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+    from { transform: scale(0.8); }
+    to { transform: scale(1.1); }
+}
+.fadeIn {
+    animation: fadeIn 0.3s linear;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1;}
+}
+
+body{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none !important;
+}
+div,p,span{
+    font-size: 16px !important;
+}
+
+.main{
+    position: relative;
+}
+.main>.job-modal-box{
+    background-color: #FFF5F5;
+    box-shadow: 1px 0 12px 1px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+}
+.job-modal-box .cancel-btn{
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+.job-modal-box .card{
+    position: relative;
+    min-width: 200px;
+}
+
+.main>.job-requirement{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 20000;
+    width: 100%;
+}
+.job-requirement .box{
+    position: relative;
+    width: 500px;
+    height: 80vh;
+    overflow-y: scroll;
+}
+.job-requirement .btn{
+    border: 2px solid #A10000;
+    transition: 0.3s ease-in-out;
+}
+.job-requirement .btn:hover{
+    color: white;
+    background-color: #A10000;
+}
+
+.main>.home{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.home video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.home .img-container{
+    position: absolute;
+    bottom: 15px;
+}
+.home .img-container img{
+    width: 30px;
+}
+@media (min-aspect-ratio: 16/9) {
+    .home video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .home video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.main>.job-description{
+    background-image: url('../image/job\ section\ background.png');
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.job-description .card{
+    position: relative;
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 10px 35px 10px 35px;
+    padding: 20px 0px;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 0;
+}
+.job-description .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160%;
+    height: 0%;
+    transform: rotate(-35deg);
+    background-color: white;
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+}
+.job-description .card:hover{
+    color: black !important;
+}
+.job-description .card:hover.card:before{
+    height: 100%;
+
+}
+.job-description .card:hover .btn{
+    color: white !important;
+    background-color: black !important;
+}
+
+.main>.flow-up{
+    background-image: url('../image/flow\ up\ to\ adoption\ background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.flow-up .title-text{
+    position: relative;
+}
+.flow-up .title-text::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #A10000;
+}
+.flow-up .card{
+   width: 270px;
+    min-height: 380px;
+    border-radius: 15px 15px 10px 10px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+.flow-up .card:hover{
+    transform: scale(1.05);
+}
+.flow-up .card.card-1 .step{
+    background-color: #A10000;
+}
+.flow-up .card.card-1 .title{
+    color: #A10000;
+}
+.flow-up .card.card-2 .step{
+    background-color: #ECB800;
+}
+.flow-up .card.card-2 .title{
+    color: #ECB800;
+}
+.flow-up .card.card-3 .step{
+    background-color: #21A401;
+}
+.flow-up .card.card-3 .title{
+    color: #21A401;
+}
+.flow-up .card.card-4 .step{
+    background-color: #9747FF;
+}
+.flow-up .card.card-4 .title{
+    color: #9747FF;
+}
+.flow-up .card .title h6:nth-child(2){
+    font-size: 13px !important;
+}
+.flow-up .card img{
+    width: 70px !important;
+}
+
+.main>.staff-voice{
+    background-image: url('../image/staff\ voice\ background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.staff-voice .voice-box-container{
+    width: 470px;
+    display: flex;
+}
+.staff-voice .voice-box-container:nth-child(even){
+    justify-content: end;
+}
+.staff-voice .voice-box{
+    width: 470px !important;
+    border-radius: 100px;
+    box-shadow: 2px 2px 5px 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease-in-out;
+}
+.staff-voice .voice-box-container:nth-child(even) .voice-box>div {
+    flex-direction: row-reverse !important;
+}
+.staff-voice .voice-box:hover{
+    transform: scale(1.05);
+}
+
+.main>.butterfly-ads .container,.main>.butterfly-ads .container-fluid{
+    background-color: #F7B320;
+    position: relative;
+}
+.butterfly-ads .ads-text{
+    width: 700px;
+    z-index: 1;
+    margin-left: 0 !important;
+}
+.butterfly-ads .btn{
+    border: 2px solid #A10000;
+    transition: 0.3s ease-in-out;
+}
+.butterfly-ads .btn:hover{
+    background-color: #A10000;
+}
+.butterfly-ads .btn>a{
+    transition: 0.3s ease-in-out;
+}
+.butterfly-ads .btn:hover>a{
+    color: white !important;
+}
+.butterfly-ads img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 450px;
+    z-index: 0;
+}
+
+.main>.events{
+    background-image: url('../image/enents\ and\ activities.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.events img{
+    width: 300px;
+}
+
+@media (min-width:1200px) {
+    .butterfly-ads .ads-text{
+        margin-left: 50px !important;
+    }
+}
+@media (max-width:1200px) {
+    .staff-voice .voice-box-container{
+        width: 90%;
+    }
+    .butterfly-ads .ads-text{
+        width: 80%;
+    }
+}
+@media (max-width:992px) {
+    .butterfly-ads .ads-text{
+        width: 100% !important;
+    }
+}
+
+@media (max-width:576px) {
+    .staff-voice .voice-box-container{
+        width: 100%;
+        justify-content: center !important;
+    }
+    .staff-voice .voice-box{
+        width: 97% !important;
+    }
+}
