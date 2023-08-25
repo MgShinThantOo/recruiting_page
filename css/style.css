@@ -6,7 +6,6 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
-
 .text-primary{
     color: #A10000 !important;
 }
@@ -48,12 +47,20 @@ div,p,span{
 .main{
     position: relative;
 }
+.main>.scroll-up{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 7000;
+}
 .main>.job-modal-box{
     background-color: #FFF5F5;
     box-shadow: 1px 0 12px 1px rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
     z-index: 10000;
+    overflow-y: scroll;
+    max-height: 100vh;
 }
 .job-modal-box .cancel-btn{
     cursor: pointer;
@@ -127,7 +134,8 @@ div,p,span{
 .job-description .card{
     position: relative;
     min-width: 250px;
-    max-width: 350px;
+    max-width: 300px;
+    min-height: 380px;
     border-radius: 10px 35px 10px 35px;
     padding: 20px 0px;
     transition: 0.3s ease-in-out;
@@ -139,7 +147,7 @@ div,p,span{
     position: absolute;
     top: 0;
     left: 0;
-    width: 160%;
+    width: 155%;
     height: 0%;
     transform: rotate(-35deg);
     background-color: white;
@@ -177,9 +185,10 @@ div,p,span{
     background-color: #A10000;
 }
 .flow-up .card{
-   width: 270px;
-    min-height: 380px;
+   width: 250px;
+    min-height: 330px;
     border-radius: 15px 15px 10px 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: 0.3s ease-in-out;
 }
@@ -232,15 +241,33 @@ div,p,span{
 }
 .staff-voice .voice-box{
     width: 470px !important;
+    position: relative;
+    overflow: hidden;
     border-radius: 100px;
     box-shadow: 2px 2px 5px 2px rgba(255, 255, 255, 0.5);
     transition: 0.3s ease-in-out;
+    z-index: 0;
+}
+.staff-voice .voice-box::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #F7B320;
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+}
+.staff-voice .voice-box:hover.voice-box::before{
+    height: 100%;
 }
 .staff-voice .voice-box-container:nth-child(even) .voice-box>div {
     flex-direction: row-reverse !important;
 }
 .staff-voice .voice-box:hover{
     transform: scale(1.05);
+    color: white !important;
 }
 
 .main>.butterfly-ads .container,.main>.butterfly-ads .container-fluid{
@@ -254,6 +281,7 @@ div,p,span{
 }
 .butterfly-ads .btn{
     border: 2px solid #A10000;
+    border-radius: 100px !important;
     transition: 0.3s ease-in-out;
 }
 .butterfly-ads .btn:hover{
@@ -269,7 +297,7 @@ div,p,span{
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 450px;
+    width: 400px;
     z-index: 0;
 }
 
