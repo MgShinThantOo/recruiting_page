@@ -98,21 +98,40 @@ div,p,span{
     position: relative;
     overflow: hidden;
 }
+.home .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #F9FBF9;
+    z-index: -1;
+}
 .home video{
     position: absolute;
     top: 0;
     bottom: 0;
     z-index: -1;
 }
+.home .mobile-background{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
 .home .img-container{
     position: absolute;
     bottom: 15px;
 }
-.home .img-container img{
+.home .img-container .mouse-effect{
     width: 30px;
 }
 @media (min-aspect-ratio: 16/9) {
     .home video{
+        width: 100%;
+        height: auto;
+    }
+    .home .mobile-background{
         width: 100%;
         height: auto;
     }
@@ -121,6 +140,10 @@ div,p,span{
     .home video{
         width: auto;
         height: 100%;
+    }
+    .home .mobile-background{
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -331,11 +354,26 @@ div,p,span{
 }
 
 @media (max-width:576px) {
+    .job-description .card h5{
+        font-size: 20px !important;
+    }
     .staff-voice .voice-box-container{
         width: 100%;
         justify-content: center !important;
     }
-    .staff-voice .voice-box{
+    .staff-voice .voice-box-container .voice-box{
         width: 97% !important;
+    }
+    .staff-voice .voice-box-container .voice-box h6{
+        font-size: 14px !important;
+    }
+    .staff-voice .voice-box-container .voice-box img{
+        width: 50px !important;
+    }
+    .butterfly-ads h5{
+        font-size: 18px !important;
+    }
+    .butterfly-ads h6,.butterfly-ads .btn a{
+        font-size: 14px !important;
     }
 }
